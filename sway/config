@@ -25,6 +25,8 @@ exec_always export XDG_SESSION_DESKTOP=$XDG_SESSION_DESKTOP
 exec_always export XCURSOR_SIZE=$XCURSOR_SIZE
 exec_always export XCURSOR_THEME=$XCURSOR_THEME
 
+exec_always swaymsg exec xdg-autostart
+
 ### Polkit-gnome
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 

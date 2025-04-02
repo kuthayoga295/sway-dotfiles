@@ -217,7 +217,8 @@
             "reboot": "systemctl reboot",
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate",
-            "lock": "$HOME/.config/waybar/power-lock.sh"
+            "lock": "$HOME/.config/waybar/power-lock.sh",
+            "exit": "swaymsg exit"
         }
     },
     "custom/launcher": {
