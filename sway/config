@@ -391,6 +391,9 @@ bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy && notify-send "Scr
 # Record
 bindsym $mod+Shift+o exec ~/.config/waybar/toggle-screen-recorder.sh
 
+### Mute Mic
+exec_always wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 1
+
 ### Wallpaper
 exec_always waypaper --restore
 
