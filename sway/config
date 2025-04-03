@@ -49,14 +49,18 @@ exec blueman-applet
 ### EasyEffects
 exec easyeffects --gapplication-service
 
+### Mute Mic
+exec_always wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 1
+exec_always wpctl set-mute 50 1
+
 ### Sway Variables
 ## Logo key. Use Mod1 for Alt.
 set $mod Mod1
 set $wallpaper /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
-set $font "Noto Sans 9"
+set $font "Adwaita Sans"
 
 ## Font
-font $font
+font pango:$font 10
 title_align center
 
 ## Home row direction keys, like vim
@@ -390,9 +394,6 @@ bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy && notify-send "Scr
 
 # Record
 bindsym $mod+Shift+o exec ~/.config/waybar/toggle-screen-recorder.sh
-
-### Mute Mic
-exec_always wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 1
 
 ### Wallpaper
 exec_always waypaper --restore
